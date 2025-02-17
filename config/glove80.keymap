@@ -90,7 +90,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71>;
+            hold-trigger-key-positions = <22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 68 69 70 71>;
         };
 
         layer_tap_num: layer_tap_num {
@@ -180,12 +180,12 @@
 
         symbol {
             bindings = <
-&none            &none           &none                 &none                  &none                                                                                                 &none  &none  &none  &none  &none
-&none            &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA                                                                    &none  &none  &none  &none  &none  &none
-&kp EXCLAMATION  &kp LEFT_BRACE  &kp SQT               &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION                                                                 &none  &none  &none  &none  &none  &none
-&kp HASH         &kp CARET       &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK                                                                 &none  &none  &none  &none  &none  &none
-&kp TILDE        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp SLASH     &kp PERCENT    &kp PERIOD  &kp BACKSLASH  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&kp AT_SIGN      &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS                        &kp BACKSPACE  &kp COLON   &kp SEMICOLON  &none  &none  &none         &none  &none  &none  &none  &none
+&none            &none           &none                 &none                  &none                                                                                                &none  &none  &none  &none  &none
+&none            &none           &none                 &none                  &none             &none                                                                       &none  &none  &none  &none  &none  &none
+&kp EXCLAMATION  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp PIPE                                                                    &none  &none  &none  &none  &none  &none
+&kp HASH         &kp CARET       &kp EQUAL             &kp PLUS               &kp DOLLAR        &kp ASTERISK                                                                &none  &none  &none  &none  &none  &none
+&kp TILDE        &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp GRAVE     &none        &none        &none          &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none            &none           &none                 &none                  &kp AMPERSAND                   &kp PERCENT  &kp AT_SIGN  &kp BACKSLASH  &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
