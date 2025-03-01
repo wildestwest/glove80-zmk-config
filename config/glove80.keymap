@@ -116,6 +116,20 @@
             flavor = "tap-preferred";
             hold-trigger-key-positions = <39 27 26 38 37 25 24 36 35 23 22 34 28 40 29 41 30 42 43 31 32 44 45 33>;
         };
+
+        vol_up_td: vol_up_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VOL_UP_TD";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_NEXT>, <&kp C_PLAY_PAUSE>;
+        };
+
+        vol_down_td: vol_down_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VOL_DOWN_TD";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOLUME_DOWN>, <&kp C_PREVIOUS>, <&kp C_MUTE>;
+        };
     };
 
     macros {
@@ -174,7 +188,7 @@
 &kp EQUAL            &kp N1               &kp N2             &kp N3           &kp N4             &kp N5                                                                                                                                                              &kp N6    &kp N7                &kp N8                &kp N9             &kp N0                 &kp BSLH
 &kp GRAVE            &kp B                &hml LEFT_ALT Y    &kp O            &kp U              &kp SQT                                                                                                                                                             &kp SEMI  &kp L                 &kp D                 &hmr RIGHT_ALT W   &kp V                  &kp Z
 &caps_word           &hml LEFT_GUI C      &kp I              &hml LCTRL E     &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                           &kp DOT   &hmr RIGHT_SHIFT H    &hmr RCTRL T          &kp S              &hmr RIGHT_GUI N       &kp Q
-&tog 4               &kp G                &kp X              &kp J            &kp K              &kp MINUS  &kp LEFT_SHIFT                 &kp LEFT_ALT             &out OUT_TOG                 &kp C_PLAY_PAUSE             &kp C_NEXT  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &tog 4
+&tog 4               &kp G                &kp X              &kp J            &kp K              &kp MINUS  &mt LC(LS(C)) LC(C)            &mt LC(LS(V)) LC(V)      &bt BT_NXT                   &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &tog 4
 &magic 1 0           &kp HOME             &kp PG_UP          &kp PG_DN        &kp END                       &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 6 ESC  &layer_tap_workspaces 6 TAB  &kp RET     &layer_tap_symbol 2 SPACE            &kp LS(LPAR)          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &magic 1 0
             >;
         };
@@ -196,8 +210,8 @@
 &none            &none           &none                 &none                  &none             &none                                                                       &none  &none  &none  &none  &none  &none
 &kp EXCLAMATION  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp PIPE                                                                    &none  &none  &none  &none  &none  &none
 &kp HASH         &kp CARET       &kp EQUAL             &kp PLUS               &kp DOLLAR        &kp ASTERISK                                                                &none  &none  &none  &none  &none  &none
-&kp TILDE        &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp GRAVE     &none        &none        &none          &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none            &none           &none                 &kp BACKSLASH          &kp AMPERSAND                   &kp PERCENT  &kp AT_SIGN  &kp BACKSPACE  &none  &none  &none         &none  &none  &none  &none  &none
+&kp TILDE        &kp LESS_THAN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp GRAVE     &none          &none        &none        &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none            &none           &none                 &kp BACKSLASH          &kp AMPERSAND                   &kp BACKSPACE  &kp PERCENT  &kp AT_SIGN  &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
