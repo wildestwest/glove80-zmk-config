@@ -188,7 +188,7 @@
 &kp EQUAL            &kp N1               &kp N2             &kp N3           &kp N4             &kp N5                                                                                                                                                              &kp N6    &kp N7                &kp N8                &kp N9             &kp N0                 &kp BSLH
 &kp GRAVE            &kp B                &hml LEFT_ALT Y    &kp O            &kp U              &kp SQT                                                                                                                                                             &kp SEMI  &kp L                 &kp D                 &hmr RIGHT_ALT W   &kp V                  &kp Z
 &caps_word           &hml LEFT_GUI C      &kp I              &hml LCTRL E     &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                           &kp DOT   &hmr RIGHT_SHIFT H    &hmr RCTRL T          &kp S              &hmr RIGHT_GUI N       &kp Q
-&tog 4               &kp G                &kp X              &kp J            &kp K              &kp MINUS  &mt LC(LS(C)) LC(C)            &mt LC(LS(V)) LC(V)      &bt BT_NXT                   &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &tog 4
+&kp LEFT_SHIFT       &kp G                &kp X              &kp J            &kp K              &kp MINUS  &kp LEFT_SHIFT                 &mt LC(LS(C)) LC(C)      &mt LS(LC(V)) LC(V)          &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &kp RIGHT_SHIFT
 &magic 1 0           &kp HOME             &kp PG_UP          &kp PG_DN        &kp END                       &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 6 ESC  &layer_tap_workspaces 6 TAB  &kp RET     &layer_tap_symbol 2 SPACE            &kp LS(LPAR)          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &magic 1 0
             >;
         };
@@ -196,7 +196,7 @@
         magic_layer {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
+&to 0        &to 1            &to 2            &to 3            &to 4            &to 5                                                             &to 6  &to 7  &none  &none  &none  &none
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
@@ -256,6 +256,17 @@
 &trans  &kp LG(NUMBER_1)      &kp LG(NUMBER_2)      &kp LG(NUMBER_3)      &kp LG(NUMBER_4)      &kp LG(NUMBER_5)                                                  &kp RG(NUMBER_6)      &kp RG(NUMBER_7)  &kp RG(N8)      &kp RG(N9)      &kp RG(N0)      &trans
 &trans  &trans                &trans                &trans                &trans                &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans            &trans          &trans          &trans          &trans
 &trans  &trans                &trans                &trans                &trans                                  &trans  &trans  &trans  &trans  &trans  &trans                        &trans            &trans          &trans          &trans          &trans
+            >;
+        };
+
+        typing {
+            bindings = <
+&mt LS(LC(C)) LC(C)  &mt LS(LC(V)) LC(V)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE                                                                                                                                                                                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp F8             &kp F9                 &kp F10
+&kp EQUAL            &kp N1               &kp N2             &kp N3           &kp N4      &kp N5                                                                                                                                                              &kp N6    &kp N7                &kp N8                &kp N9             &kp N0                 &kp BSLH
+&kp GRAVE            &kp B                &kp Y              &kp O            &kp U       &kp SQT                                                                                                                                                             &kp SEMI  &kp L                 &kp D                 &kp W              &kp V                  &kp Z
+&caps_word           &kp C                &kp I              &kp E            &kp A       &kp COMMA                                                                                                                                                           &kp DOT   &kp H                 &kp T                 &kp S              &kp N                  &kp Q
+&kp LEFT_SHIFT       &kp G                &kp X              &kp J            &kp K       &kp MINUS  &kp LEFT_SHIFT                 &mt LC(LS(C)) LC(C)      &mt LC(LS(V)) LC(V)          &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &kp RIGHT_SHIFT
+&magic 1 0           &kp HOME             &kp PG_UP          &kp PG_DN        &kp END                &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 6 ESC  &layer_tap_workspaces 6 TAB  &kp RET     &layer_tap_symbol 2 SPACE            &kp LS(LPAR)          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &magic 1 0
             >;
         };
     };
