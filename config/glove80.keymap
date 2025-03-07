@@ -19,6 +19,9 @@
 #define MAGIC 2
 #define FACTORY_TEST 3
 
+&caps_word {
+};
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -39,7 +42,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 58 59 60 61 62>;
+            hold-trigger-key-positions = <16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 58 59 60 61 62 52 53 54 55 56 57 69 70 71 72 73 74 75 76 77 78 79 63>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
@@ -55,7 +58,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <10 11 12 13 14 15 22 23 24 25 26 27 35 36 37 38 39 47 48 49 50 51>;
+            hold-trigger-key-positions = <10 11 12 13 14 15 22 23 24 25 26 27 35 36 37 38 39 47 48 49 50 51 1 2 3 4 11 12 13 14 15 23 24 25 26 27 35 36 37 38 39 47 48 49 50 51 52 53 54 55 56 57 65 66 67 68 69 70 71 72 73 74 0 1 10 11 22 23 34 35 46 47 64 65>;
             require-prior-idle-ms = <150>;
         };
 
@@ -177,8 +180,8 @@
 &to 0           &to 4            &to 7            &kp C_VOLUME_UP  &kp C_MUTE                                                                                                                                                                                       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp F8             &kp F9                 &kp F10
 &kp EQUAL       &kp N1           &kp N2           &kp N3           &kp N4             &kp N5                                                                                                                                                              &kp N6    &kp N7                &kp N8                &kp N9             &kp N0                 &kp BSLH
 &kp Q           &kp B            &hml LEFT_ALT Y  &kp O            &kp U              &kp SQT                                                                                                                                                             &kp SEMI  &kp L                 &kp D                 &hmr RIGHT_ALT W   &kp V                  &kp Z
-&kp LEFT_SHIFT  &hml LEFT_GUI C  &kp I            &hml LCTRL E     &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                           &kp DOT   &hmr RIGHT_SHIFT H    &hmr RCTRL T          &kp S              &hmr RIGHT_GUI N       &kp RIGHT_SHIFT
-&caps_word      &kp G            &kp X            &kp J            &kp K              &kp MINUS  &kp LEFT_SHIFT                 &mt LC(LS(C)) LC(C)      &mt LS(LC(V)) LC(V)          &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &kp RIGHT_SHIFT
+&caps_word      &hml LEFT_GUI C  &kp I            &hml LCTRL E     &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                           &kp DOT   &hmr RIGHT_SHIFT H    &hmr RCTRL T          &kp S              &hmr RIGHT_GUI N       &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp G            &kp X            &kp J            &kp K              &kp MINUS  &kp LEFT_SHIFT                 &kp LCTRL                &kp LEFT_GUI                 &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &kp RIGHT_SHIFT
 &magic 1 0      &kp HOME         &kp PG_UP        &kp PG_DN        &kp END                       &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 6 ESC  &layer_tap_workspaces 6 TAB  &kp RET     &layer_tap_symbol 2 SPACE            &kp LS(LPAR)          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &magic 1 0
             >;
         };
