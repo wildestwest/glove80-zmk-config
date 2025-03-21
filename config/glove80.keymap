@@ -20,6 +20,8 @@
 #define FACTORY_TEST 3
 
 &caps_word {
+    mods = <(MOD_LSFT)>;
+    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
 };
 
 / {
@@ -85,7 +87,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 68 69 70 71>;
         };
 
         layer_tap_num: layer_tap_num {
@@ -162,6 +163,20 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        dirup: dirup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+            label = "DIRUP";
+        };
+
+        emailaddr: emailaddr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp E &kp S &kp T &kp O &kp N &kp DOT &kp H &kp U &kp L &kp L &kp A &kp N &kp D &kp E &kp R &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAILADDR";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -183,8 +198,8 @@
 &none           &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5                                                                                                                                                           &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0      &none
 &kp Q           &kp B            &kp Y            &kp O         &kp U              &kp SQT                                                                                                                                                                &kp SEMI      &kp L               &kp D         &kp W             &kp V             &kp Z
 &kp LEFT_SHIFT  &hml LEFT_GUI C  &hml LEFT_ALT I  &hml LCTRL E  &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                              &kp DOT       &hmr RIGHT_SHIFT H  &hmr RCTRL T  &hmr RIGHT_ALT S  &hmr RIGHT_GUI N  &kp RIGHT_SHIFT
-&caps_word      &kp G            &kp X            &kp J         &kp K              &kp MINUS     &none                          &kp C_AC_COPY            &kp C_AC_PASTE               &vol_down_td                 &vol_up_td  &none                      &kp FSLH      &kp R               &kp M         &kp F             &kp P             &bt BT_NXT
-&magic 1 0      &none            &none            &none         &none                            &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 0 ESC  &layer_tap_workspaces 0 TAB  &kp RET     &layer_tap_symbol 2 SPACE                &none               &none         &none             &none             &magic 1 0
+&caps_word      &kp G            &kp X            &kp J         &kp K              &kp MINUS     &none                          &kp C_AC_COPY            &kp C_AC_PASTE               &vol_down_td                 &vol_up_td  &none                      &kp FSLH      &kp R               &kp M         &kp F             &kp P             &kp UNDER
+&magic 1 0      &none            &none            &none         &none                            &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 0 ESC  &layer_tap_workspaces 0 TAB  &kp RET     &layer_tap_symbol 7 SPACE                &none               &none         &none             &none             &magic 1 0
             >;
         };
 
@@ -251,6 +266,17 @@
 &kp LEFT_SHIFT  &kp C     &kp I      &kp E            &kp A       &kp COMMA                                                                                                                                                           &kp DOT   &kp H                 &kp T                 &kp S              &kp N                  &kp RIGHT_SHIFT
 &caps_word      &kp G     &kp X      &kp J            &kp K       &kp MINUS  &kp LEFT_SHIFT                 &mt LC(LS(C)) LC(C)      &mt LC(LS(V)) LC(V)          &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &bt BT_NXT
 &magic 1 0      &kp HOME  &kp PG_UP  &kp PG_DN        &kp END                &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 0 ESC  &layer_tap_workspaces 0 TAB  &kp RET     &layer_tap_symbol 2 SPACE            &kp LS(LPAR)          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &magic 1 0
+            >;
+        };
+
+        symbols2 {
+            bindings = <
+&none  &none            &none          &none             &none                                                                                                    &none       &none                 &none                  &none         &none
+&none  &none            &none          &none             &none              &none                                                                  &none          &none       &none                 &none                  &none         &none
+&none  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp PERIOD                                                             &kp AMPERSAND  &emailaddr  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT   &none
+&none  &kp EXCLAMATION  &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                                                               &kp PIPE       &kp COLON   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION  &none
+&none  &kp CARET        &kp SLASH      &kp ASTERISK      &kp BACKSLASH      &dirup      &none          &none      &none       &none  &none  &none  &kp TILDE      &kp DOLLAR  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &none
+&none  &none            &none          &none             &none                          &kp BACKSPACE  &kp SPACE  &kp ESCAPE  &none  &none  &none                 &none       &none                 &none                  &none         &none
             >;
         };
     };
