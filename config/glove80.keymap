@@ -198,7 +198,7 @@
 &none           &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5                                                                                                                                                           &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0      &none
 &kp Q           &kp B            &kp Y            &kp O         &kp U              &kp SQT                                                                                                                                                                &kp SEMI      &kp L               &kp D         &kp W             &kp V             &kp Z
 &kp LEFT_SHIFT  &hml LEFT_GUI C  &hml LEFT_ALT I  &hml LCTRL E  &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                              &kp DOT       &hmr RIGHT_SHIFT H  &hmr RCTRL T  &hmr RIGHT_ALT S  &hmr RIGHT_GUI N  &kp RIGHT_SHIFT
-&caps_word      &kp G            &kp X            &kp J         &kp K              &kp MINUS     &none                          &kp C_AC_COPY            &kp C_AC_PASTE               &vol_down_td                 &vol_up_td  &none                      &kp FSLH      &kp R               &kp M         &kp F             &kp P             &kp UNDER
+&caps_word      &kp G            &kp X            &kp J         &kp K              &kp MINUS     &kp LCTRL                      &kp C_AC_COPY            &kp C_AC_PASTE               &vol_down_td                 &vol_up_td  &kp RIGHT_ALT              &kp FSLH      &kp R               &kp M         &kp F             &kp P             &kp UNDER
 &magic 1 0      &none            &none            &none         &none                            &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 0 ESC  &layer_tap_workspaces 0 TAB  &kp RET     &layer_tap_symbol 7 SPACE                &none               &none         &none             &none             &magic 1 0
             >;
         };
@@ -249,12 +249,12 @@
 
         Numbers {
             bindings = <
-&none  &none  &none  &none  &none                                                                        &none   &none   &none      &none        &none
-&none  &none  &none  &none  &none  &none                                                          &none  &none   &none   &none      &none        &none
-&none  &none  &none  &none  &none  &none                                                          &kp K  &kp N7  &kp N8  &kp N9     &kp PERCENT  &kp COLON
-&none  &none  &none  &none  &none  &none                                                          &kp G  &kp N4  &kp N5  &kp N6     &kp MINUS    &kp PLUS
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none          &none       &none   &kp J  &kp N1  &kp N2  &kp N3     &kp SLASH    &kp ASTERISK
-&none  &none  &none  &none  &none         &none  &none  &none  &kp BACKSPACE  &kp PERIOD  &kp N0         &kp W   &kp X   &kp EQUAL  &none        &none
+&none  &none  &none  &none  &none                                                                           &none   &none   &none   &none        &none
+&none  &none  &none  &none  &none  &none                                                             &none  &none   &none   &none   &none        &none
+&none  &none  &none  &none  &none  &none                                                             &kp K  &kp N7  &kp N8  &kp N9  &kp PERCENT  &kp COLON
+&none  &none  &none  &none  &none  &none                                                             &kp G  &kp N4  &kp N5  &kp N6  &kp MINUS    &kp PLUS
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none          &none       &kp EQUAL  &kp J  &kp N1  &kp N2  &kp N3  &kp SLASH    &kp ASTERISK
+&none  &none  &none  &none  &none         &none  &none  &none  &kp BACKSPACE  &kp PERIOD  &kp N0            &kp W   &kp X   &kp D   &none        &none
             >;
         };
 
@@ -264,7 +264,7 @@
 &kp EQUAL       &kp N1    &kp N2     &kp N3           &kp N4      &kp N5                                                                                                                                                              &kp N6    &kp N7                &kp N8                &kp N9             &kp N0                 &kp BSLH
 &kp Q           &kp B     &kp Y      &kp O            &kp U       &kp SQT                                                                                                                                                             &kp SEMI  &kp L                 &kp D                 &kp W              &kp V                  &kp Z
 &kp LEFT_SHIFT  &kp C     &kp I      &kp E            &kp A       &kp COMMA                                                                                                                                                           &kp DOT   &kp H                 &kp T                 &kp S              &kp N                  &kp RIGHT_SHIFT
-&caps_word      &kp G     &kp X      &kp J            &kp K       &kp MINUS  &kp LEFT_SHIFT                 &mt LC(LS(C)) LC(C)      &mt LC(LS(V)) LC(V)          &vol_down_td                 &vol_up_td  &kp RIGHT_SHIFT            &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &bt BT_NXT
+&caps_word      &kp G     &kp X      &kp J            &kp K       &kp MINUS  &kp LCTRL                      &mt LC(LS(C)) LC(C)      &mt LC(LS(V)) LC(V)          &vol_down_td                 &vol_up_td  &kp RIGHT_ALT              &kp FSLH  &kp R                 &kp M                 &kp F              &kp P                  &bt BT_NXT
 &magic 1 0      &kp HOME  &kp PG_UP  &kp PG_DN        &kp END                &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 0 ESC  &layer_tap_workspaces 0 TAB  &kp RET     &layer_tap_symbol 2 SPACE            &kp LS(LPAR)          &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &magic 1 0
             >;
         };
