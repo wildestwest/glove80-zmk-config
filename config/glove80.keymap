@@ -126,6 +126,15 @@
             #binding-cells = <0>;
             bindings = <&kp C_VOLUME_DOWN>, <&kp C_PREVIOUS>, <&kp C_MUTE>;
         };
+
+        hold_tap_capsword: hold_tap_capsword {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_CAPSWORD";
+            bindings = <&kp>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -179,7 +188,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <34 45>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -194,12 +210,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&to 0           &to 4            &to 6            &none         &none                                                                                                                                                                                                   &none               &none         &none             &none             &none
-&none           &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5                                                                                                                                                           &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0      &none
-&kp Q           &kp B            &kp Y            &kp O         &kp U              &kp SQT                                                                                                                                                                &kp SEMI      &kp L               &kp D         &kp W             &kp V             &kp Z
-&kp LEFT_SHIFT  &hml LEFT_GUI C  &hml LEFT_ALT I  &hml LCTRL E  &hml LEFT_SHIFT A  &kp COMMA                                                                                                                                                              &kp DOT       &hmr RIGHT_SHIFT H  &hmr RCTRL T  &hmr RIGHT_ALT S  &hmr RIGHT_GUI N  &kp RIGHT_SHIFT
-&caps_word      &kp G            &kp X            &kp J         &kp K              &kp MINUS     &kp LCTRL                      &kp C_AC_COPY            &kp C_AC_PASTE               &vol_down_td                 &vol_up_td  &kp RIGHT_ALT              &kp FSLH      &kp R               &kp M         &kp F             &kp P             &kp UNDER
-&magic 1 0      &none            &none            &none         &none                            &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &layer_tap_workspaces 0 ESC  &layer_tap_workspaces 0 TAB  &kp RET     &layer_tap_symbol 7 SPACE                &none               &none         &none             &none             &magic 1 0
+&to 0             &to 4            &to 6            &none         &none                                                                                                                                                                    &none               &none         &none             &none             &none
+&none             &kp NUMBER_1     &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5                                                                                                                            &kp NUMBER_6  &kp NUMBER_7        &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0      &none
+&kp Q             &kp B            &kp Y            &kp O         &kp U              &kp SQT                                                                                                                                 &kp SEMI      &kp L               &kp D         &kp W             &kp V             &kp Z
+&kp LEFT_SHIFT    &hml LEFT_GUI C  &hml LEFT_ALT I  &hml LCTRL E  &hml LEFT_SHIFT A  &kp COMMA                                                                                                                               &kp DOT       &hmr RIGHT_SHIFT H  &hmr RCTRL T  &hmr RIGHT_ALT S  &hmr RIGHT_GUI N  &kp RIGHT_SHIFT
+&kp LEFT_BRACKET  &kp G            &kp X            &kp J         &kp K              &kp MINUS     &kp LCTRL                      &kp K_COPY               &kp K_PASTE  &vol_down_td  &vol_up_td  &kp RIGHT_ALT              &kp FSLH      &kp R               &kp M         &kp F             &kp P             &kp RIGHT_BRACKET
+&magic 1 0        &none            &none            &none         &none                            &layer_tap_cursor 3 BACKSPACE  &layer_tap_num 5 DELETE  &kp ESC      &kp TAB       &kp RET     &layer_tap_symbol 7 SPACE                &none               &none         &none             &none             &magic 1 0
             >;
         };
 
