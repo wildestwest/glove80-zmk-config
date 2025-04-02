@@ -197,7 +197,7 @@
         };
 
         aux {
-            bindings = <&kp F24>;
+            bindings = <&kp F12>;
             key-positions = <69 74>;
         };
     };
